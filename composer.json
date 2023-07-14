@@ -1,5 +1,5 @@
 {
-    "name": "benmorel/ebay-sdk-php",
+    "name": "xtremevision/ebay-sdk-php",
     "description": "An eBay SDK for PHP. Fork of dts/ebay-sdk-php with support for PHP 8.",
     "keywords": ["ebay", "api", "sdk"],
     "type": "library",
