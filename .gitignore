@@ -3,3 +3,4 @@
 /build/artifacts
 /docs/_build
 /.phpunit.result.cache
+/.idea
