@@ -12,7 +12,7 @@ namespace DTS\eBaySDK\Taxonomy\Services;
 
 class TaxonomyService extends \DTS\eBaySDK\Taxonomy\Services\TaxonomyBaseService
 {
-    const API_VERSION = 'v1_beta';
+    const API_VERSION = 'v1';
 
     /**
      * @property array $operations Associative array of operations provided by the service.
