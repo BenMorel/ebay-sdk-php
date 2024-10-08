@@ -1,0 +1,10 @@
+parameters:
+    phpVersion: 70200
+    level: 9
+    paths:
+        - build
+        - src
+        - test
+includes:
+  - phpstan-baseline.neon
+  - vendor/phpstan/phpstan-deprecation-rules/rules.neon

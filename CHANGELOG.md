@@ -1,5 +1,36 @@
 # CHANGELOG
 
+## 19.2.0 - 2024-04-05
+
+- Fix deprecated call to `http_build_query` (https://github.com/BenMorel/ebay-sdk-php/pull/6 by @Wojtazzzz)
+- Add IAF token for Shopping API (https://github.com/BenMorel/ebay-sdk-php/pull/1 by @dm-alex)
+- Support for guzzlehttp/psr7 2.0 (see https://github.com/BenMorel/ebay-sdk-php/pull/5 by @xtremevision)
+
+## 19.1.0 - 2022-08-13
+
+- ✨ Compatibility with PHP 8.1
+- 🔥 Minimum PHP version is now 7.2
+
+## 19.0.0 - 2020-12-05
+
+**First release of this fork.**
+
+- ✨ Fixed compatibility with PHP 7.3, 7.4 & 8.0
+- ✨ Added compatibility with Guzzle 7 (still compatible with Guzzle 6)
+- 🔥 Dropped compatibility with PHP < 7.1
+
+Fixes the following upstream issues:
+
+- https://github.com/davidtsadler/ebay-sdk-php/issues/279 "Warning: continue targeting switch is equivalent to break." by @CnczubehoerEu cc @michabbb
+- https://github.com/davidtsadler/ebay-sdk-php/pull/277 "Fix PHP 7.4 compatibility" by @abedham
+- https://github.com/davidtsadler/ebay-sdk-php/pull/276 "Swap implode parameters" by @abedham
+- https://github.com/davidtsadler/ebay-sdk-php/pull/264 "Fix php 7.2 notice - replace wrong keyword in XmlParser" by @bethrezen
+- https://github.com/davidtsadler/ebay-sdk-php/pull/263 "Fix warning in newer versions of php" by @joe-pritchard
+- https://github.com/davidtsadler/ebay-sdk-php/pull/258 "Use break instead of continue in switch statement" by @joe-pritchard cc @olimortimer @michabbb @yiiprogrammer @skcin7
+- https://github.com/davidtsadler/ebay-sdk-php/pull/253 "Fix compatibility with PHP 7.3" by @stefnats
+- https://github.com/davidtsadler/ebay-sdk-php/pull/244 "Update for PHP 7.3 compatibility" by @olimortimer cc @Aristona @yiiprogrammer @willishq @michabbb @izshreyansh @rbur0425
+- https://github.com/davidtsadler/ebay-sdk-php/issues/241 "PHP 7.3 Error - continue targeting switch is equivalent to break" by @olimortimer cc @michabbb @Aristona @Andicot @yiiprogrammer
+
 ## 18.0.0 - 2018-06-28
 
 ### Features
