@@ -316,8 +316,6 @@ class BaseType implements JmesPathableObjectInterface
      */
     private function get($class, $name)
     {
-        echo $class, ": ", $name, "\n";
-
         self::ensurePropertyExists($class, $name);
 
         return $this->getValue($class, $name);
