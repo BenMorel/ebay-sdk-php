@@ -176,6 +176,7 @@ abstract class BaseService
 
                 $response = $xmlParser->parse($xmlResponse);
                 $response->attachment($attachment);
+                $response->responseHeaders($res->getHeaders());
 
                 return $response;
             }

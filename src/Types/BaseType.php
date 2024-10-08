@@ -51,6 +51,11 @@ class BaseType implements JmesPathableObjectInterface
     private $attachment;
 
     /**
+     * @var string Associative array storing the httpHandler responseHeaders.
+     */
+    private $responseheaders;
+
+    /**
      * @param array $values Can pass an associative array that will set the objects properties.
      */
     public function __construct(array $values = [])
@@ -62,6 +67,7 @@ class BaseType implements JmesPathableObjectInterface
         $this->setValues(__CLASS__, $values);
 
         $this->attachment = ['data' => null, 'mimeType' => null];
+        $this->responseheaders = ['data' => null];
     }
 
     /**
@@ -207,6 +213,27 @@ class BaseType implements JmesPathableObjectInterface
         return $this->attachment['data'] !== null;
     }
 
+        /**
+     * Method to get or set the object's response headers. Overrides any existing response headers.
+     *
+     * @param mixed $data If a string it is assumed to be the contents of the attachment. If an array copy its values across.
+     *
+     * @return mixed Returns the contents of the current atachment or null if none has been specified.
+     */
+    public function responseheaders($data = null)
+    {
+        if ($data !== null) {
+            $this->responseheaders['data'] = json_encode($data);
+        }
+
+        return $this->responseheaders;
+    }
+
+    public function getResponseHeaders()
+    {
+        return json_decode($this->responseheaders['data']);
+    }
+
     /**
      * Helper method that returns an associative array of the object's properties and values.
      *
@@ -289,6 +316,8 @@ class BaseType implements JmesPathableObjectInterface
      */
     private function get($class, $name)
     {
+        echo $class, ": ", $name, "\n";
+
         self::ensurePropertyExists($class, $name);
 
         return $this->getValue($class, $name);
