@@ -222,8 +222,9 @@ abstract class BaseRestService
         $headers['Accept'] = 'application/json';
         $headers['Content-Type'] = 'application/json';
         $headers['Content-Length'] = strlen($body);
+        // Default to en-US but allow user to change it
+        $headers[self::HDR_REQUEST_LANGUAGE] = 'en-US';
 
-        // Add optional headers.
         if ($this->getConfig('requestLanguage')) {
             $headers[self::HDR_REQUEST_LANGUAGE] = $this->getConfig('requestLanguage');
         }
