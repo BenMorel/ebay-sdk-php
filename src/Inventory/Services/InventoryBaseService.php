@@ -40,6 +40,8 @@ class InventoryBaseService extends \DTS\eBaySDK\Services\BaseRestService
     public static function getConfigDefinitions()
     {
         $definitions = parent::getConfigDefinitions();
+        $definitions['requestLanguage']['default'] = 'en-US';
+        $definitions['requestLanguage']['required'] = true;
 
         return $definitions + [
             'apiVersion' => [
@@ -53,7 +55,7 @@ class InventoryBaseService extends \DTS\eBaySDK\Services\BaseRestService
             ],
             'marketplaceId' => [
                 'valid' => ['string']
-            ]
+            ],
         ];
     }
 
