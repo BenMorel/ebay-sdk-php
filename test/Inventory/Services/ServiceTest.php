@@ -29,6 +29,12 @@ class ServiceTest extends \PHPUnit\Framework\TestCase
         $this->assertEquals([
             'valid' => ['string']
         ], $d['marketplaceId']);
+        $this->assertArrayHasKey('requestLanguage', $d);
+        $this->assertEquals([
+            'valid' => ['string'],
+            'default' => 'en-US',
+            'required' => true
+        ], $d['requestLanguage']);
     }
 
     public function testRequiredEbayHeaders()
